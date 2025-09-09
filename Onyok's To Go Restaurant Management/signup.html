@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.ibb.co/6n6ShB0/Client-Info-Group13.png') no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1.5s ease-in;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        label img {
+            margin-right: 10px;
+            width: 20px;
+            height: auto;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #8B0000;
+            outline: none;
+            box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #8B0000;
+            color: white;
+            border: 2px solid #8B0000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #FF4500;
+            color: white;
+        }
+        .signup {
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+        }
+        .signup a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .signup a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form action="signup_process.php" method="POST">
+            <label for="username">
+                <img src="https://i.ibb.co/8d2sn6b/username.jpg" alt="User Icon">
+                Username:
+            </label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">
+                <img src="https://i.ibb.co/2nz6DC7/email.jpg" alt="email">
+                Email:
+            </label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">
+                <img src="https://i.ibb.co/dKHTsvn/password.jpg" alt="Password Icon">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Sign Up">
+        </form>
+        <p class="signup">Already have an account? <a href="login.html">Login here</a>.</p>
+    </div>
+</body>
+</html>
